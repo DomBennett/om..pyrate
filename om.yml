@@ -1,0 +1,4 @@
+program: PyRate
+version: latest
+flavour: DES2
+details: Estimate speciation, extinction, and preservation rates from fossil occurrence data using a Bayesian framework. 
