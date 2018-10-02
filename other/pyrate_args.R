@@ -201,10 +201,17 @@ muliplier
 "
 
 
-lines <- strsplit(x = pyrate_args, split = '\n-')[[1]]
-arg_lines <- lines[grepl(pattern = '^-', x = lines)]
+arg_lines <- strsplit(x = pyrate_args, split = '\n-')[[1]][-1]
 args <- sub(pattern = '\\s.*$', replacement = '', x = arg_lines)
-args <- sub(pattern = '^-', replacement = '', x = args)
+
+function_args <- paste0('function(', paste0(paste0(args, '=NULL'),
+                                            collapse = ', '), ')')
+document_args <- gsub(pattern = '(\\s{2,}|\n)', replacement = ' ', arg_lines)
+document_args <- paste0("#' @param ", document_args)
+document_args <- paste0(document_args, collapse = '\n')
+cat(document_args)
+
+descriptions <- sub(pattern = '')
 defaults <- sub(pattern = '^-[^ ]+', replacement = '', x = arg_lines)
 defaults <- sub(pattern = '\\s{2,}.*', replacement = '', x = defaults)
 defaults <- sub(pattern = '^\\s', replacement = '', x = defaults)
