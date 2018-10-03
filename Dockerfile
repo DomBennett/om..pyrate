@@ -10,8 +10,6 @@ RUN wget https://github.com/dsilvestro/PyRate/archive/73390e727cdf42d9d07c10820a
     rm 73390e727cdf42d9d07c10820a2fa730241d695c.tar.gz && \
     mv PyRate-73390e727cdf42d9d07c10820a2fa730241d695c PyRate
 
-ENV PATH=".:/PyRate:${PATH}"
-
 # outsider requires working_dir
 RUN mkdir /working_dir
 WORKDIR /working_dir

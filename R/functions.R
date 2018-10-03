@@ -3,7 +3,8 @@ pkgnm <- environmentName(env = environment())
 base_function <- function(cmd, ...) {
   args <- outsider::.args_parse(...)
   files_to_send <- outsider::.which_args_are_filepaths(args)
-  outsider::.run(pkgnm = pkgnm, files_to_send = files_to_send, cmd, args)
+  outsider::.run(pkgnm = pkgnm, files_to_send = files_to_send, 'python2.7',
+                 paste0('/PyRate/', cmd), args)
 }
 
 #' @name PyRate
@@ -13,7 +14,7 @@ base_function <- function(cmd, ...) {
 #' @example examples/PyRate.R
 #' @export
 PyRate <- function(...) {
-  base_function(cmd = 'PyRate', ...)
+  base_function(cmd = 'PyRate.py', ...)
 }
 
 #' @name PyRateContinuous
@@ -23,7 +24,7 @@ PyRate <- function(...) {
 #' @example examples/PyRateContinuous.R
 #' @export
 PyRateContinuous <- function(...) {
-  base_function(cmd = 'PyRateContinuous', ...)
+  base_function(cmd = 'PyRateContinuous.py', ...)
 }
 
 #' @name PyRateContinuousShift
@@ -33,7 +34,7 @@ PyRateContinuous <- function(...) {
 #' @example examples/PyRateContinuousShift.R
 #' @export
 PyRateContinuousShift <- function(...) {
-  base_function(cmd = 'PyRateContinuousShift', ...)
+  base_function(cmd = 'PyRateContinuousShift.py', ...)
 }
 
 #' @name PyRateDES
@@ -43,7 +44,7 @@ PyRateContinuousShift <- function(...) {
 #' @example examples/PyRateDES.R
 #' @export
 PyRateDES <- function(...) {
-  base_function(cmd = 'PyRateDES', ...)
+  base_function(cmd = 'PyRateDES.py', ...)
 }
 
 #' @name PyRateDES2
@@ -53,7 +54,7 @@ PyRateDES <- function(...) {
 #' @example examples/PyRateDES2.R
 #' @export
 PyRateDES2 <- function(...) {
-  base_function(cmd = 'PyRateDES2', ...)
+  base_function(cmd = 'PyRateDES2.py', ...)
 }
 
 #' @name PyRateMBD
@@ -63,7 +64,7 @@ PyRateDES2 <- function(...) {
 #' @example examples/PyRateMBD.R
 #' @export
 PyRateMBD <- function(...) {
-  base_function(cmd = 'PyRateMBD', ...)
+  base_function(cmd = 'PyRateMBD.py', ...)
 }
 
 #' @name PyRateMCDD
@@ -73,5 +74,5 @@ PyRateMBD <- function(...) {
 #' @example examples/PyRateMCDD.R
 #' @export
 PyRateMCDD <- function(...) {
-  base_function(cmd = 'PyRateMCDD', ...)
+  base_function(cmd = 'PyRateMCDD.py', ...)
 }

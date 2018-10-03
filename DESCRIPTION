@@ -1,6 +1,17 @@
-Package: om..pyrate..dombennett
+Package: om..pyrate..2.0..dombennett
 Type: Package
-Title: Template outsider module
-Version: 0.0.0
+Title: PyRate
+Version: 0.1.0
+Author: Dom Bennett
+Maintainer: Dom Bennett <dominic.john.bennett@gmail.com>
+Description: Install and run PyRate from R. PyRate is a program to estimate
+    speciation, extinction, and preservation rates from fossil occurrence data
+    using a Bayesian framework.
+License: MIT + file LICENSE
 Encoding: UTF-8
+BugReports: https://github.com/dombennett/om..pyrate..2.0/issues
 RoxygenNote: 6.1.0
+Depends:
+    R (>= 3.3.0)
+Imports:
+    outsider
