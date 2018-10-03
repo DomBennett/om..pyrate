@@ -4,3 +4,4 @@ Dockerfile
 om.yml
 dev.R
 examples/
+tutorial.R
