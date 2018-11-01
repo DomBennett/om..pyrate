@@ -1,7 +1,8 @@
 pkgnm <- environmentName(env = environment())
 
 base_function <- function(cmd, ...) {
-  args <- outsider::.args_parse(...)
+  args <- outsider::.args_parse()
+  args <- args[-1]
   # wd is determined either by -wd or the location of the input file
   if ('-wd' %in% args) {
     wd_i <- which(args == '-wd')
@@ -13,9 +14,9 @@ base_function <- function(cmd, ...) {
     wd <- sub(pattern = pattern, replacement = '', x = args[1])
   }
   files_to_send <- outsider::.which_args_are_filepaths(args, wd)
-  outsider::.run(pkgnm = pkgnm, files_to_send = files_to_send, dest = wd,
-                 'python2.7', paste0('/PyRate/', cmd),
-                 outsider::.to_basename(args))
+  args <- c(paste0('/PyRate/', cmd), outsider::.to_basename(args))
+  outsider::.run(pkgnm = pkgnm, files_to_send = files_to_send, dest = wd, 
+                 cmd = 'python2.7', args = args)
 }
 
 #' @name PyRate
