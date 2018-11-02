@@ -1,4 +1,4 @@
-Package: om..pyrate..2.0..dombennett
+Package: om..pyrate..dombennett
 Type: Package
 Title: PyRate
 Version: 0.1.0
@@ -9,7 +9,7 @@ Description: Install and run PyRate from R. PyRate is a program to estimate
     using a Bayesian framework.
 License: MIT + file LICENSE
 Encoding: UTF-8
-BugReports: https://github.com/dombennett/om..pyrate..2.0/issues
+BugReports: https://github.com/dsilvestro/om..pyrate/issues
 RoxygenNote: 6.1.0
 Depends:
     R (>= 3.3.0)
