@@ -2,6 +2,7 @@ pkgnm <- environmentName(env = environment())
 
 base_function <- function(cmd, ...) {
   args <- outsider::.args_parse()
+  # remove cmd from args
   args <- args[-1]
   # wd is determined either by -wd or the location of the input file
   if ('-wd' %in% args) {
@@ -10,8 +11,11 @@ base_function <- function(cmd, ...) {
     # if wd is specified, then drop from args
     args <- args[-1 * c(wd_i, wd_i + 1)]
   } else {
-    pattern <- paste0(.Platform$file.sep, basename(args[1]))
-    wd <- sub(pattern = pattern, replacement = '', x = args[1])
+    wd <- sub(pattern = basename(args[1]), replacement = .Platform$file.sep,
+              x = args[1])
+    if (wd == .Platform$file.sep) {
+      wd <- getwd()
+    }
   }
   files_to_send <- outsider::.which_args_are_filepaths(args, wd)
   args <- c(paste0('/PyRate/', cmd), outsider::.to_basename(args))
