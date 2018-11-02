@@ -10,7 +10,7 @@ RUN wget https://github.com/dsilvestro/PyRate/archive/73390e727cdf42d9d07c10820a
     rm 73390e727cdf42d9d07c10820a2fa730241d695c.tar.gz && \
     mv PyRate-73390e727cdf42d9d07c10820a2fa730241d695c PyRate
 
-RUN cd PyRate/pyrate_lib/fastPyRateC/ModulePyrateC &&
+RUN cd PyRate/pyrate_lib/fastPyRateC/ModulePyrateC && \
     sh install.sh
 
 # outsider requires working_dir

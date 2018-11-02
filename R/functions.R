@@ -11,9 +11,8 @@ base_function <- function(cmd, ...) {
     # if wd is specified, then drop from args
     args <- args[-1 * c(wd_i, wd_i + 1)]
   } else {
-    wd <- sub(pattern = basename(args[1]), replacement = .Platform$file.sep,
-              x = args[1])
-    if (wd == .Platform$file.sep) {
+    wd <- sub(pattern = basename(args[1]), replacement = '', x = args[1])
+    if (wd == '') {
       wd <- getwd()
     }
   }
