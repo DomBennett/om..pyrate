@@ -1,6 +1,3 @@
 program: PyRate
-versions:
-  - latest
-  - 2.0
 details: Estimate speciation, extinction, and preservation rates from fossil
   occurrence data using a Bayesian framework. 
