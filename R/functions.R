@@ -1,16 +1,17 @@
 
 base_function <- function(cmd, ...) {
   arglist <- outsider::.arglist_get(...)
+  print(arglist)
   wd <- outsider::.wd_get(arglist = arglist, key = '-wd', i = 1)
   files_to_send <- outsider::.filestosend_get(arglist = arglist, wd = wd)
   arglist <- c(paste0('/PyRate/', cmd), arglist)
   arglist <- outsider::.arglist_parse(arglist = arglist,
                                       keyvals_to_drop = '-wd')
-  launcher <- outsider::launcher_class(repo = 'dombennett/om..pyrate',
-                                       cmd = 'python2.7', wd = wd,
-                                       files_to_send = files_to_send,
-                                       arglist = arglist)
-  outsider::run(launcher)
+  otsdr <- outsider::.outsider_init(repo = 'dombennett/om..pyrate',
+                                    cmd = 'python2.7', wd = wd,
+                                    files_to_send = files_to_send,
+                                    arglist = arglist)
+  outsider::.run(otsdr)
 }
 
 #' @name PyRate
