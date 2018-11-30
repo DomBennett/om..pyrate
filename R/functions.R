@@ -1,7 +1,6 @@
 
 base_function <- function(cmd, ...) {
   arglist <- outsider::.arglist_get(...)
-  print(arglist)
   wd <- outsider::.wd_get(arglist = arglist, key = '-wd', i = 1)
   files_to_send <- outsider::.filestosend_get(arglist = arglist, wd = wd)
   arglist <- c(paste0('/PyRate/', cmd), arglist)
