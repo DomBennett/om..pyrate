@@ -11,7 +11,7 @@ Description: Install and run PyRate from R. PyRate is a program to estimate
     using a Bayesian framework.
 License: MIT + file LICENSE
 Encoding: UTF-8
-BugReports: https://github.com/dsilvestro/om..pyrate/issues
+BugReports: https://github.com/dombennett/om..pyrate/issues
 RoxygenNote: 6.1.0
 Depends:
     R (>= 3.3.0)

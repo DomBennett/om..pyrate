@@ -2,6 +2,8 @@
 base_function <- function(cmd, ...) {
   arglist <- outsider::.arglist_get(...)
   wd <- outsider::.wd_get(arglist = arglist, key = '-wd', i = 1)
+  # if input file determines wd, convert the filepath to its directory
+  wd <- outsider::.dirpath_get(flpth = wd)
   files_to_send <- outsider::.filestosend_get(arglist = arglist, wd = wd)
   arglist <- c(paste0('/PyRate/', cmd), arglist)
   arglist <- outsider::.arglist_parse(arglist = arglist,
