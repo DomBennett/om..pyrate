@@ -18,4 +18,4 @@ r_github_packages:
   - antonellilab/outsider
   
 script:
-  - Rscript -e 'outsider::module_test(repo = "dombennett/om..pyrate")'
+  - Rscript -e 'outsider::.module_test(repo = "dombennett/om..pyrate")'
