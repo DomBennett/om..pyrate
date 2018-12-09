@@ -2,6 +2,8 @@ Package: om..pyrate..dombennett
 Type: Package
 Title: PyRate
 Version: 0.1.0
+GitHub: dombennett
+Docker: dombennett
 Author: Dom Bennett
 Maintainer: Dom Bennett <dominic.john.bennett@gmail.com>
 Description: Install and run PyRate from R. PyRate is a program to estimate
