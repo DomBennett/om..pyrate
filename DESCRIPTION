@@ -1,4 +1,4 @@
-Package: om..pyrate..dombennett
+Package: om..pyrate
 Type: Package
 Title: PyRate
 Version: 0.1.0
@@ -16,4 +16,6 @@ RoxygenNote: 6.1.0
 Depends:
     R (>= 3.3.0)
 Imports:
+    outsider.base
+Suggests:
     outsider

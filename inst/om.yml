@@ -1,3 +1,6 @@
 program: PyRate
 details: Estimate speciation, extinction, and preservation rates from fossil
   occurrence data using a Bayesian framework. 
+docker: dombennett
+github: dombennett
+url: https://github.com/DomBennett/om..pyrate
