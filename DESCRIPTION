@@ -2,8 +2,6 @@ Package: om..pyrate
 Type: Package
 Title: PyRate
 Version: 0.1.0
-GitHub: dombennett
-Docker: dombennett
 Author: Dom Bennett
 Maintainer: Dom Bennett <dominic.john.bennett@gmail.com>
 Description: Install and run PyRate from R. PyRate is a program to estimate
@@ -12,10 +10,9 @@ Description: Install and run PyRate from R. PyRate is a program to estimate
 License: MIT + file LICENSE
 Encoding: UTF-8
 BugReports: https://github.com/dombennett/om..pyrate/issues
-RoxygenNote: 6.1.0
+RoxygenNote: 6.1.1
 Depends:
     R (>= 3.3.0)
 Imports:
-    outsider.base
-Suggests:
+    outsider.base,
     outsider

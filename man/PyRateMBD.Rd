@@ -14,6 +14,6 @@ Run PyRateMBD
 }
 \examples{
 library(outsider)
-PyRateMBD <- module_import('PyRateMBD', repo = 'dombennett/om..pyrate..2.0')
+PyRateMBD <- module_import('PyRateMBD', repo = 'dombennett/om..pyrate')
 PyRateMBD('-h')
 }

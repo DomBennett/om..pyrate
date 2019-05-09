@@ -1,7 +1,7 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
-Dockerfile
-om.yml
-dev.R
-examples/
-tutorial.R
+^dev\.R$
+^examples$
+^tutorial\.R$
+^\.git$
+^\.travis\.yml$
