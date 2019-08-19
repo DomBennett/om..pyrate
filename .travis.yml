@@ -17,3 +17,8 @@ addons:
 r_github_packages:
   - antonellilab/outsider.base
   - antonellilab/outsider
+  - antonellilab/outsider.devtools
+  
+script:
+  - Rscript -e 'outsider.devtools::module_test(getwd())'
+
